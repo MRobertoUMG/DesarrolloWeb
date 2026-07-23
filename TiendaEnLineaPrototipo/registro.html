@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Registro de Usuario - Tienda en Línea</title>
+</head>
+<body>
+
+    <header>
+        <h1>Crear una Cuenta Nueva</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="productos.html">Catálogo Completo</a></li>
+                <li><a href="carrito.html">Carrito de Compras</a></li>
+                <li><a href="registro.html">Crear Cuenta</a></li>
+                <li><a href="contacto.html">Contacto y Soporte</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <hr>
+
+    <main>
+        <section>
+            <h2>Formulario de Inscripción</h2>
+            <form>
+                <fieldset>
+                    <legend>Datos Personales</legend>
+
+                    <label for="nombres">Nombres:</label><br>
+                    <input type="text" id="nombres" name="nombres" required><br><br>
+
+                    <label for="apellidos">Apellidos:</label><br>
+                    <input type="text" id="apellidos" name="apellidos" required><br><br>
+
+                    <label for="fecha_nacimiento">Fecha de Nacimiento:</label><br>
+                    <input type="date" id="fecha_nacimiento" name="fecha_nacimiento"><br><br>
+
+                    <label for="genero">Género:</label><br>
+                    <select id="genero" name="genero">
+                        <option value="masculino">Masculino</option>
+                        <option value="femenino">Femenino</option>
+                        <option value="otro">Otro / Prefiero no decir</option>
+                    </select>
+                </fieldset>
+
+                <br>
+
+                <fieldset>
+                    <legend>Credenciales de Acceso</legend>
+
+                    <label for="correo">Correo Electrónico:</label><br>
+                    <input type="email" id="correo" name="correo" required placeholder="usuario@dominio.com"><br><br>
+
+                    <label for="pass">Contraseña:</label><br>
+                    <input type="password" id="pass" name="pass" required><br><br>
+
+                    <label for="confirm_pass">Confirmar Contraseña:</label><br>
+                    <input type="password" id="confirm_pass" name="confirm_pass" required>
+                </fieldset>
+
+                <br>
+
+                <label for="terminos">
+                    <input type="checkbox" id="terminos" name="terminos" required> Acepto los términos y condiciones de servicio.
+                </label>
+
+                <br><br>
+                <button type="button">Registrar Cuenta</button>
+                <button type="reset">Limpiar Formulario</button>
+            </form>
+        </section>
+    </main>
+
+    <hr>
+
+    <footer>
+        <p><strong>Desarrollado por:</strong> Mario Roberto Rompich Yoc | <strong>Carnet:</strong> 9490-17-17052</p>
+    </footer>
+
+</body>
+</html>

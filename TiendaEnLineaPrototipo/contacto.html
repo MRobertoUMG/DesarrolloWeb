@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Contacto y Soporte - Tienda en Línea</title>
+</head>
+<body>
+
+    <header>
+        <h1>Atención al Cliente y Contacto</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="productos.html">Catálogo Completo</a></li>
+                <li><a href="carrito.html">Carrito de Compras</a></li>
+                <li><a href="registro.html">Crear Cuenta</a></li>
+                <li><a href="contacto.html">Contacto y Soporte</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <hr>
+
+    <main>
+        <section>
+            <h2>Ubicación y Datos de Contacto</h2>
+            <p><strong>Dirección:</strong> Centro Universitario El Naranjo, Mixco, Guatemala</p>
+            <p><strong>Teléfono de Soporte:</strong> +(502) 2200-0000</p>
+            <p><strong>Horario de Atención:</strong> Lunes a Viernes de 8:00 AM a 5:00 PM</p>
+        </section>
+
+        <hr>
+
+        <section>
+            <h2>Envíanos un Mensaje</h2>
+            <form>
+                <label for="nombre_contacto">Nombre Completo:</label><br>
+                <input type="text" id="nombre_contacto" name="nombre_contacto" required><br><br>
+
+                <label for="email_contacto">Correo de Contacto:</label><br>
+                <input type="email" id="email_contacto" name="email_contacto" required><br><br>
+
+                <label for="asunto">Asunto del Mensaje:</label><br>
+                <select id="asunto" name="asunto">
+                    <option value="consulta">Consulta General</option>
+                    <option value="soporte">Soporte Técnico</option>
+                    <option value="devolucion">Devoluciones y Garantía</option>
+                    <option value="reclamo">Reclamos</option>
+                </select><br><br>
+
+                <label for="mensaje">Escribe tu mensaje:</label><br>
+                <textarea id="mensaje" name="mensaje" rows="6" cols="50" placeholder="Escribe tus dudas o comentarios aquí..."></textarea><br><br>
+
+                <button type="button">Enviar Mensaje</button>
+            </form>
+        </section>
+    </main>
+
+    <hr>
+
+    <footer>
+        <p><strong>Desarrollado por:</strong> Mario Roberto Rompich Yoc | <strong>Carnet:</strong> 9490-17-17052</p>
+    </footer>
+
+</body>
+</html>

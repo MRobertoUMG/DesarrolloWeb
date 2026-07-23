@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Carrito de Compras - Tienda en Línea</title>
+</head>
+<body>
+
+    <header>
+        <h1>Mi Carrito de Compras</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="productos.html">Catálogo Completo</a></li>
+                <li><a href="carrito.html">Carrito de Compras</a></li>
+                <li><a href="registro.html">Crear Cuenta</a></li>
+                <li><a href="contacto.html">Contacto y Soporte</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <hr>
+
+    <main>
+        <section>
+            <h2>Productos Seleccionados</h2>
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th>Producto</th>
+                        <th>Precio Unitario</th>
+                        <th>Cantidad</th>
+                        <th>Subtotal</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Laptop Pro 15"</td>
+                        <td>Q1,200.00</td>
+                        <td>1</td>
+                        <td>Q1,200.00</td>
+                    </tr>
+                    <tr>
+                        <td>Teclado Mecánico RGB</td>
+                        <td>Q85.00</td>
+                        <td>2</td>
+                        <td>Q170.00</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <th colspan="3">Total a Pagar:</th>
+                        <th>Q1,370.00</th>
+                    </tr>
+                </tfoot>
+            </table>
+        </section>
+
+        <hr>
+
+        <section>
+            <h2>Datos para la Entrega y Pago</h2>
+            <form>
+                <fieldset>
+                    <legend>Información de Envío</legend>
+                    
+                    <label for="direccion">Dirección de Entrega:</label><br>
+                    <input type="text" id="direccion" name="direccion" required placeholder="Calle, Avenida, Casa No."><br><br>
+
+                    <label for="ciudad">Ciudad/Municipio:</label><br>
+                    <input type="text" id="ciudad" name="ciudad" required><br><br>
+
+                    <label for="departamento">Departamento/Estado:</label><br>
+                    <input type="text" id="departamento" name="departamento" required>
+                </fieldset>
+
+                <br>
+
+                <fieldset>
+                    <legend>Método de Pago</legend>
+                    
+                    <input type="radio" id="tarjeta" name="metodo_pago" value="tarjeta">
+                    <label for="tarjeta">Tarjeta de Crédito / Débito</label><br>
+
+                    <input type="radio" id="transferencia" name="metodo_pago" value="transferencia">
+                    <label for="transferencia">Transferencia Bancaria</label><br>
+
+                    <input type="radio" id="efectivo" name="metodo_pago" value="efectivo">
+                    <label for="efectivo">Pago contra entrega</label>
+                </fieldset>
+
+                <br>
+                <button type="button">Confirmar y Procesar Pedido</button>
+            </form>
+        </section>
+    </main>
+
+    <hr>
+
+    <footer>
+        <p><strong>Desarrollado por:</strong> Mario Roberto Rompich Yoc | <strong>Carnet:</strong> 9490-17-17052</p>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Catálogo de Productos - Tienda en Línea</title>
+</head>
+<body>
+
+    <header>
+        <h1>Catálogo de Productos</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="productos.html">Catálogo Completo</a></li>
+                <li><a href="carrito.html">Carrito de Compras</a></li>
+                <li><a href="registro.html">Crear Cuenta</a></li>
+                <li><a href="contacto.html">Contacto y Soporte</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <hr>
+
+    <main>
+        <section>
+            <h2>Filtros de Búsqueda</h2>
+            <form>
+                <label for="buscar">Buscar producto:</label>
+                <input type="text" id="buscar" name="buscar" placeholder="Ej. Teclado, Monitor...">
+                
+                <label for="categoria">Categoría:</label>
+                <select id="categoria" name="categoria">
+                    <option value="">Todas las categorías</option>
+                    <option value="computadoras">Computadoras</option>
+                    <option value="audio">Audio</option>
+                    <option value="accesorios">Accesorios</option>
+                </select>
+
+                <button type="button">Filtrar</button>
+            </form>
+        </section>
+
+        <hr>
+
+        <section>
+            <h2>Listado de Productos</h2>
+
+            <table width="100%" border="1">
+                <thead>
+                    <tr>
+                        <th>Categoría</th>
+                        <th>Producto</th>
+                        <th>Descripción</th>
+                        <th>Precio</th>
+                        <th>Acción</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Computadoras</td>
+                        <td><img src="./resources/latptop.jpg" alt="" width="40%"></td>
+                        <td>Laptop Pro 15"</td>
+                        <td>Procesador I7, 16GB RAM, SSD 512GB</td>
+                        <td>Q1,200.00</td>
+                        <td><a href="detalle-laptop.html">Ver Detalle</a></td>
+                    </tr>
+                    <tr>
+                        <td>Audio</td>
+                        <td><img src="./resources/audifonos.jpg" alt="" width="40%"></td>
+                        <td>Audífonos Inalámbricos</td>
+                        <td>Cancelación de ruido activa, Bluetooth 5.2</td>
+                        <td>Q150.00</td>
+                        <td><a href="detalle-audifonos.html">Ver Detalle</a></td>
+                    </tr>
+                    <tr>
+                        <td>Accesorios</td>
+                        <td><img src="./resources/teclado.jpg" alt="" width="40%"></td>
+                        <td>Teclado Mecánico RGB</td>
+                        <td>Switches Red, retroiluminado, distribución en español</td>
+                        <td>Q85.00</td>
+                        <td><a href="detalle-teclado.html">Ver Detalle</a></td>
+                    </tr>
+                    <tr>
+                        <td>Accesorios</td>
+                        <td><img src="./resources/mouse.jpg" alt="" width="40%"></td>
+                        <td>Mouse Ergonómico</td>
+                        <td>Sensor óptico 16000 DPI con 6 botones programables</td>
+                        <td>Q45.00</td>
+                        <td><a href="detalle-mouse.html">Ver Detalle</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section><br>
+    </main>
+
+    <hr>
+
+    <footer>
+        <p><strong>Desarrollado por:</strong> Mario Roberto Rompich Yoc | <strong>Carnet:</strong> 9490-17-17052</p>
+    </footer>
+
+</body>
+</html>
