@@ -4,23 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Excursión a Semuc Champey</title>
+    <link rel="stylesheet" href="./css/styles.css">
+    
 </head>
 <body>
 
     <header>
-        <h1>Excursión Aventura en Semuc Champey</h1>
-        <hr>        
-        <nav><br>
-            <h3>Índice de Contenido</h3>
+        <h1 >Excursión Aventura en Semuc Champey</h1>
+        <hr>
+        <nav>
             <ul>
                 <li><a href="#descripcion">Descripción del Lugar</a></li>
                 <li><a href="#galeria">Galería de Imágenes</a></li>
                 <li><a href="#itinerario">Tabla de Itinerarios</a></li>
                 <li><a href="#actividades">Lista de Actividades</a></li>
             </ul>
-        </nav><br>
+        </nav>
     </header>
-    <hr>
+    
     <main>
         <section id="descripcion"><br>
             <h2>Descripción del Lugar</h2>
@@ -32,30 +33,22 @@
         <hr>
         <section id="galeria"><br>
             <h2>Galería de Imágenes</h2>
-            <table border="1">
-            <tbody>
-                <tr>
-                    <td>
-                        <img src="./Resources/semuc1.jpg" alt="Pozas turquesas de Semuc Champey" width="100%">
-                    </td>
-                    <td>
-                        <img src="./Resources/semuc2.jpg" alt="Vista desde el mirador" width="100%">
-                    </td>
-                    <td>
-                        <img src="./Resources/semuc3.jpg" alt="Cueva de K'anba" width="100%">
-                    </td>
-                    <td>
-                        <img src="./Resources/semuc4.jpg" alt="Río Cahabón y vegetación" width="100%" >
-                    </td>
-                    <td>
-                        <img src="./Resources/semuc5.jpg" alt="Sendero hacia el mirador" width="100%" >
-                    </td>
-                    <td>
-                        <img src="./Resources/semuc6.jpg" alt="Sendero hacia el mirador" width="100%">
-                    </td>
-                </tr>
-            </tbody>
-            </table>  
+            <div class="carousel" aria-label="Carrusel de imágenes de Semuc Champey">
+                <div class="carousel__track">
+                    <div class="carousel__slide"><img src="./Resources/semuc1.jpg" alt="Pozas turquesas de Semuc Champey"></div>
+                    <div class="carousel__slide"><img src="./Resources/semuc2.jpg" alt="Vista desde el mirador"></div>
+                    <div class="carousel__slide"><img src="./Resources/semuc3.jpg" alt="Cueva de K'anba"></div>
+                    <div class="carousel__slide"><img src="./Resources/semuc4.jpg" alt="Río Cahabón y vegetación"></div>
+                    <div class="carousel__slide"><img src="./Resources/semuc5.jpg" alt="Sendero hacia el mirador"></div>
+                    <div class="carousel__slide"><img src="./Resources/semuc6.jpg" alt="Sendero hacia el mirador"></div>
+                    <div class="carousel__slide"><img src="./Resources/semuc1.jpg" alt="Pozas turquesas de Semuc Champey"></div>
+                    <div class="carousel__slide"><img src="./Resources/semuc2.jpg" alt="Vista desde el mirador"></div>
+                    <div class="carousel__slide"><img src="./Resources/semuc3.jpg" alt="Cueva de K'anba"></div>
+                    <div class="carousel__slide"><img src="./Resources/semuc4.jpg" alt="Río Cahabón y vegetación"></div>
+                    <div class="carousel__slide"><img src="./Resources/semuc5.jpg" alt="Sendero hacia el mirador"></div>
+                    <div class="carousel__slide"><img src="./Resources/semuc6.jpg" alt="Sendero hacia el mirador"></div>
+                </div>
+            </div>
         </section><br><br><br>
         <hr>
         <section id="itinerario"><br>
@@ -125,7 +118,53 @@
     <hr>
     <footer><br>
         <p><strong>Página desarrollada por:</strong> Mario Roberto Rompich Yoc | 9491-17-17052</p>
-    </footer><br>
+    </footer>
 
+    <!-- Botón flotante de contacto -->
+    <a href="#" class="fab" aria-label="Contactar" id="contactFab">&#x2709;</a>
+
+    <div class="contact-modal" id="contactModal" aria-hidden="true" role="dialog" aria-labelledby="contactModalTitle">
+        <div class="contact-modal__content">
+            <button type="button" class="contact-modal__close" id="contactClose" aria-label="Cerrar contacto">×</button>
+            <h2 id="contactModalTitle">Contacto</h2>
+            <p>Para más información sobre la excursión, puedes usar cualquiera de estos datos:</p>
+            <ul>
+                <li><strong>Teléfono:</strong> +502 1234 5678</li>
+                <li><strong>Correo:</strong> contacto@semucchampey.gt</li>
+                <li><strong>Dirección:</strong> Lanquín, Alta Verapaz, Guatemala</li>
+                <li><strong>Horarios:</strong> Lunes a Domingo, 8:00 AM - 6:00 PM</li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        const contactFab = document.getElementById('contactFab');
+        const contactModal = document.getElementById('contactModal');
+        const contactClose = document.getElementById('contactClose');
+
+        function openContactModal(event) {
+            event.preventDefault();
+            contactModal.classList.add('contact-modal--open');
+            contactModal.setAttribute('aria-hidden', 'false');
+        }
+
+        function closeContactModal() {
+            contactModal.classList.remove('contact-modal--open');
+            contactModal.setAttribute('aria-hidden', 'true');
+        }
+
+        contactFab.addEventListener('click', openContactModal);
+        contactClose.addEventListener('click', closeContactModal);
+        contactModal.addEventListener('click', (event) => {
+            if (event.target === contactModal) {
+                closeContactModal();
+            }
+        });
+        document.addEventListener('keydown', (event) => {
+            if (event.key === 'Escape' && contactModal.classList.contains('contact-modal--open')) {
+                closeContactModal();
+            }
+        });
+    </script>
 </body>
 </html>

@@ -1,0 +1,248 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background: #f5f7fb;
+    color: #333;
+}
+
+header {
+    background: linear-gradient(135deg, #2a7a6f, #3fb8b8);
+    color: #fff;
+    padding: 20px 16px;
+    position: fixed; 
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+main {
+    margin: 150px 0px 0px 0px;
+}
+
+header h1 {
+    margin: 0 0 12px;
+    font-size: 2rem;
+    text-align: center;
+}
+
+nav {
+    margin-top: 16px;
+    backdrop-filter: blur(12px);
+}
+
+nav h3 {
+    margin: 0 0 14px;
+    font-size: 1rem;
+    color: #e8f7f6;
+    letter-spacing: 0.03em;
+}
+
+nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav li {
+    flex: 1 1 150px;
+    min-width: 150px;
+}
+
+nav a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: #ffffff;
+    padding: 14px 18px;
+    transition: transform 0.25s ease, background 0.25s ease, box-shadow 0.25s ease;
+    font-weight: 600;
+    letter-spacing: 0.01em;
+}
+
+nav a:hover,
+nav a:focus {
+    background: rgba(255, 255, 255, 0.32);
+    box-shadow: 0 12px 22px rgba(0, 0, 0, 0.12);
+    transform: translateY(-2px);
+    border-radius: 6px;
+}
+
+main {
+    padding: 24px 16px;
+}
+
+section {
+    margin-bottom: 32px;
+    scroll-margin-top: 160px; 
+}
+section > h2 {
+    text-align: center;
+}
+
+.carousel {
+    overflow: hidden;
+    border-radius: 6px;
+    margin: 16px;
+    background: #eaf6f3;
+}
+
+.carousel__track {
+    display: flex;
+    gap: 0;
+    animation: carousel-scroll 28s linear infinite;
+}
+
+.carousel__slide {
+    flex: 0 0 auto;
+    width: 33.333%;
+    margin: 2px !important;
+}
+
+.carousel__slide img {
+    width: 100%;
+    display: block;
+    object-fit: cover;
+    border-radius: 0;
+}
+
+@keyframes carousel-scroll {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    border: 1px solid #bbb;
+    padding: 10px;
+    text-align: left;
+    background: #fff;
+}
+
+th {
+    background: #e2f2ef;
+}
+
+footer {
+    padding: 18px 16px;
+    text-align: center;
+    background: #2a7a6f;
+    color: #fff;
+}
+
+/* Floating contact button (FAB) */
+.fab {
+    position: fixed;
+    right: 20px;
+    bottom: 24px;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: #039796;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-size: 22px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.18);
+    z-index: 1200;
+    transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+
+.fab:hover,
+.fab:focus {
+    transform: translateY(-4px);
+    box-shadow: 0 16px 36px rgba(0,0,0,0.22);
+}
+
+.fab:focus {
+    outline: 3px solid rgba(255,255,255,0.18);
+}
+
+.contact-modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(15, 26, 48, 0.65);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.25s ease, visibility 0.25s ease;
+    z-index: 1300;
+    padding: 18px;
+}
+
+.contact-modal--open {
+    opacity: 1;
+    visibility: visible;
+}
+
+.contact-modal__content {
+    width: min(420px, 100%);
+    background: #ffffff;
+    border-radius: 24px;
+    padding: 26px 24px 22px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+
+.contact-modal h2 {
+    margin-top: 0;
+    font-size: 1.8rem;
+    color: #103f3e;
+}
+
+.contact-modal p,
+.contact-modal ul {
+    margin: 16px 0 0;
+    color: #3a3a3a;
+    font-size: 1rem;
+}
+
+.contact-modal ul {
+    list-style: none;
+    padding: 0;
+}
+
+.contact-modal li {
+    margin-bottom: 10px;
+}
+
+.contact-modal__close {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    width: 36px;
+    height: 36px;
+    border: none;
+    border-radius: 50%;
+    background: #ef5350;
+    color: #fff;
+    font-size: 22px;
+    cursor: pointer;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.18);
+}
+
+.contact-modal__close:hover,
+.contact-modal__close:focus {
+    background: #d84343;
+}
+
+
