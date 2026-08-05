@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Excursión a Semuc Champey</title>
     <link rel="stylesheet" href="./css/styles.css">
-    
+    <script src="./js/script.js" defer></script>
 </head>
 <body>
 
@@ -16,6 +16,7 @@
             <ul>
                 <li><a href="#descripcion">Descripción del Lugar</a></li>
                 <li><a href="#galeria">Galería de Imágenes</a></li>
+                <li><a href="#cotizacion">Cotizar Excursión</a></li>
                 <li><a href="#itinerario">Tabla de Itinerarios</a></li>
                 <li><a href="#actividades">Lista de Actividades</a></li>
             </ul>
@@ -33,21 +34,59 @@
         <hr>
         <section id="galeria"><br>
             <h2>Galería de Imágenes</h2>
-            <div class="carousel" aria-label="Carrusel de imágenes de Semuc Champey">
-                <div class="carousel__track">
-                    <div class="carousel__slide"><img src="./Resources/semuc1.jpg" alt="Pozas turquesas de Semuc Champey"></div>
-                    <div class="carousel__slide"><img src="./Resources/semuc2.jpg" alt="Vista desde el mirador"></div>
-                    <div class="carousel__slide"><img src="./Resources/semuc3.jpg" alt="Cueva de K'anba"></div>
-                    <div class="carousel__slide"><img src="./Resources/semuc4.jpg" alt="Río Cahabón y vegetación"></div>
-                    <div class="carousel__slide"><img src="./Resources/semuc5.jpg" alt="Sendero hacia el mirador"></div>
-                    <div class="carousel__slide"><img src="./Resources/semuc6.jpg" alt="Sendero hacia el mirador"></div>
-                    <div class="carousel__slide"><img src="./Resources/semuc1.jpg" alt="Pozas turquesas de Semuc Champey"></div>
-                    <div class="carousel__slide"><img src="./Resources/semuc2.jpg" alt="Vista desde el mirador"></div>
-                    <div class="carousel__slide"><img src="./Resources/semuc3.jpg" alt="Cueva de K'anba"></div>
-                    <div class="carousel__slide"><img src="./Resources/semuc4.jpg" alt="Río Cahabón y vegetación"></div>
-                    <div class="carousel__slide"><img src="./Resources/semuc5.jpg" alt="Sendero hacia el mirador"></div>
-                    <div class="carousel__slide"><img src="./Resources/semuc6.jpg" alt="Sendero hacia el mirador"></div>
+            <div class="carrusel" aria-label="Carrusel de imágenes de Semuc Champey">
+                <div class="carrusel__pista">
+                    <div class="carrusel__diapositiva"><img src="./Resources/semuc1.jpg" alt="Pozas turquesas de Semuc Champey" data-title="Pozas turquesas de Semuc Champey"></div>
+                    <div class="carrusel__diapositiva"><img src="./Resources/semuc2.jpg" alt="Vista desde el mirador" data-title="Vista desde el mirador"></div>
+                    <div class="carrusel__diapositiva"><img src="./Resources/semuc3.jpg" alt="Cueva de K'anba" data-title="Cueva de K'anba"></div>
+                    <div class="carrusel__diapositiva"><img src="./Resources/semuc4.jpg" alt="Río Cahabón y vegetación" data-title="Río Cahabón y vegetación"></div>
+                    <div class="carrusel__diapositiva"><img src="./Resources/semuc5.jpg" alt="Sendero hacia el mirador" data-title="Sendero hacia el mirador"></div>
+                    <div class="carrusel__diapositiva"><img src="./Resources/semuc6.jpg" alt="Turista cruzando el puente natural" data-title="Turista cruzando el puente natural"></div>
+                    <div class="carrusel__diapositiva"><img src="./Resources/semuc1.jpg" alt="Pozas turquesas de Semuc Champey" data-title="Pozas turquesas de Semuc Champey"></div>
+                    <div class="carrusel__diapositiva"><img src="./Resources/semuc2.jpg" alt="Vista desde el mirador" data-title="Vista desde el mirador"></div>
+                    <div class="carrusel__diapositiva"><img src="./Resources/semuc3.jpg" alt="Cueva de K'anba" data-title="Cueva de K'anba"></div>
+                    <div class="carrusel__diapositiva"><img src="./Resources/semuc4.jpg" alt="Río Cahabón y vegetación" data-title="Río Cahabón y vegetación"></div>
+                    <div class="carrusel__diapositiva"><img src="./Resources/semuc5.jpg" alt="Sendero hacia el mirador" data-title="Sendero hacia el mirador"></div>
+                    <div class="carrusel__diapositiva"><img src="./Resources/semuc6.jpg" alt="Turista cruzando el puente natural" data-title="Turista cruzando el puente natural"></div>
                 </div>
+            </div>
+
+            <div class="visor-imagen" id="imageModal" aria-hidden="true" role="dialog" aria-labelledby="imageModalTitle">
+                <div class="visor-imagen__contenido">
+                    <button type="button" class="visor-imagen__cerrar" id="imageModalClose" aria-label="Cerrar visor de imagen">×</button>
+                    <figure>
+                        <img src="" alt="" class="visor-imagen__img" id="imageModalImg">
+                        <figcaption id="imageModalTitle"></figcaption>
+                    </figure>
+                </div>
+            </div>
+        </section><br><br><br>
+        <hr>
+        <section id="cotizacion"><br>
+            <h2>Cotizador de Presupuesto</h2>
+            <div class="tarjeta-cotizacion">
+                <form id="quotationForm">
+                    <div class="fila-cotizacion">
+                        <label for="attendees">Número de asistentes</label>
+                        <input type="number" id="attendees" name="attendees" min="1" value="1" required>
+                    </div>
+                    <div class="fila-cotizacion">
+                        <label for="package">Tipo de paquete / tour</label>
+                        <select id="package" name="package">
+                            <option value="0">Básico (solo tour) - Q100 por persona</option>
+                            <option value="35">Standard (tour + guía) - Q135 por persona</option>
+                            <option value="65">Premium (tour + guía + seguro) - Q165 por persona</option>
+                        </select>
+                    </div>
+                    <fieldset class="grupo-cotizacion">
+                        <legend>Servicios adicionales</legend>
+                        <label><input type="checkbox" id="transport" name="extras" value="45"> Transporte incluido (+Q45 por persona)</label>
+                        <label><input type="checkbox" id="food" name="extras" value="30"> Alimentación (+Q30 por persona)</label>
+                        <label><input type="checkbox" id="equipment" name="extras" value="20"> Equipo (+Q20 por persona)</label>
+                    </fieldset>
+                    <button type="submit" class="boton-primario">Calcular Total</button>
+                </form>
+                <div class="resultado-cotizacion" id="quotationResult" aria-live="polite"></div>
             </div>
         </section><br><br><br>
         <hr>
@@ -105,8 +144,11 @@
         <hr>
         <section id="actividades"><br>
             <h2>Otras Actividades Sugeridas</h2>
-            <p>Además del itinerario principal, durante tu tiempo libre puedes disfrutar de:</p>
-            <ul>
+            <div class="buscador-actividades-contenedor">
+                <label for="buscadorActividades">Buscar actividades</label>
+                <input type="text" id="buscadorActividades" class="buscador-actividades" placeholder="Escribe para filtrar actividades...">
+            </div>
+            <ul class="lista-actividades">
                 <li><strong>Senderismo nocturno:</strong> Recorridos guiados por la selva para observación de fauna nocturna.</li>
                 <li><strong>Avistamiento de aves:</strong> Observación del Quetzal y aves exóticas locales al amanecer.</li>
                 <li><strong>Tour de Cacao:</strong> Visita a fincas locales para aprender el proceso artesanal del chocolate.</li>
@@ -114,8 +156,12 @@
                 <li><strong>Fotografía de paisaje:</strong> Captura impresionantes vistas panorámicas desde diversos ángulos del valle.</li>
             </ul>
         </section><br><br><br>
+        <hr>
+        <section id="testimonios" class="seccion-testimonios"><br>
+            <h2>Opiniones de nuestros visitantes</h2><br>
+            <div class="contenedor-testimonios" id="contenedorTestimonios"></div>
+        </section><br><br><br>
     </main>
-    <hr>
     <footer><br>
         <p><strong>Página desarrollada por:</strong> Mario Roberto Rompich Yoc | 9491-17-17052</p>
     </footer>
@@ -123,9 +169,9 @@
     <!-- Botón flotante de contacto -->
     <a href="#" class="fab" aria-label="Contactar" id="contactFab">&#x2709;</a>
 
-    <div class="contact-modal" id="contactModal" aria-hidden="true" role="dialog" aria-labelledby="contactModalTitle">
-        <div class="contact-modal__content">
-            <button type="button" class="contact-modal__close" id="contactClose" aria-label="Cerrar contacto">×</button>
+    <div class="modal-contacto" id="contactModal" aria-hidden="true" role="dialog" aria-labelledby="contactModalTitle">
+        <div class="modal-contacto__contenido">
+            <button type="button" class="modal-contacto__cerrar" id="contactClose" aria-label="Cerrar contacto">×</button>
             <h2 id="contactModalTitle">Contacto</h2>
             <p>Para más información sobre la excursión, puedes usar cualquiera de estos datos:</p>
             <ul>
@@ -133,38 +179,23 @@
                 <li><strong>Correo:</strong> contacto@semucchampey.gt</li>
                 <li><strong>Dirección:</strong> Lanquín, Alta Verapaz, Guatemala</li>
                 <li><strong>Horarios:</strong> Lunes a Domingo, 8:00 AM - 6:00 PM</li>
-            </ul>
+            </ul>            <form id="formularioReserva" class="formulario-reserva">
+                <div class="fila-formulario">
+                    <label for="nombreContacto">Nombre completo</label>
+                    <input type="text" id="nombreContacto" name="nombreContacto" placeholder="Tu nombre" required >
+                </div>
+                <div class="fila-formulario">
+                    <label for="correoContacto">Correo electrónico</label>
+                    <input type="email" id="correoContacto" name="correoContacto" placeholder="tu@correo.com" required>
+                </div>
+                <div class="fila-formulario">
+                    <label for="personasReserva">Número de personas</label>
+                    <input type="number" id="personasReserva" name="personasReserva" min="1" value="1" required>
+                </div>
+                <div class="resultado-confirmacion" id="resultadoConfirmacion" aria-live="polite"></div>
+                <button type="submit" class="boton-primario">Enviar solicitud</button>
+            </form>        
         </div>
     </div>
-
-    <script>
-        const contactFab = document.getElementById('contactFab');
-        const contactModal = document.getElementById('contactModal');
-        const contactClose = document.getElementById('contactClose');
-
-        function openContactModal(event) {
-            event.preventDefault();
-            contactModal.classList.add('contact-modal--open');
-            contactModal.setAttribute('aria-hidden', 'false');
-        }
-
-        function closeContactModal() {
-            contactModal.classList.remove('contact-modal--open');
-            contactModal.setAttribute('aria-hidden', 'true');
-        }
-
-        contactFab.addEventListener('click', openContactModal);
-        contactClose.addEventListener('click', closeContactModal);
-        contactModal.addEventListener('click', (event) => {
-            if (event.target === contactModal) {
-                closeContactModal();
-            }
-        });
-        document.addEventListener('keydown', (event) => {
-            if (event.key === 'Escape' && contactModal.classList.contains('contact-modal--open')) {
-                closeContactModal();
-            }
-        });
-    </script>
 </body>
 </html>
