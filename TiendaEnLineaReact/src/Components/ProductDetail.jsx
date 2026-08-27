@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import laptop from '../assets/products/latptop.jpg';
+import laptop from '../assets/products/laptop.jpg';
 import mouse from '../assets/products/mouse.jpg';
 import teclado from '../assets/products/teclado.jpg';
 import audifonos from '../assets/products/audifonos.jpg';

@@ -1,4 +1,4 @@
-import laptop from '../assets/products/latptop.jpg';
+import laptop from '../assets/products/laptop.jpg';
 import teclado from '../assets/products/teclado.jpg';
 import mouse from '../assets/products/mouse.jpg';
 
