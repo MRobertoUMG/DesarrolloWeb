@@ -3,7 +3,6 @@ import mouse from '../assets/products/mouse.jpg';
 import teclado from '../assets/products/teclado.jpg';
 import audifonos from '../assets/products/audifonos.jpg';
 
-
 export default function Product({ onSelectProduct }) {
     const products = [
         { id: 0, img: laptop, name: "Laptop Pro 15", description: "Procesador de alto rendimiento para trabajo pesado", price: 1200.00 },
