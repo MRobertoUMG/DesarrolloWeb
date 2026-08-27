@@ -52,6 +52,7 @@
 
 body {
   margin: 0;
+  /*background:#f8f9fa!important;*/
 }
 
 #root {
@@ -59,7 +60,7 @@ body {
 
   max-width: 100%;
   margin: 0 auto;
-  text-align: center;
+  /*text-align: center;*/
   border-inline: 1px solid var(--border);
   min-height: 100svh;
   display: flex;
@@ -112,7 +113,37 @@ code {
 }
 
 .welcome {
-  background: #0a1f1f;
+  background: rgb(5 19 34 / 99%) !important;
   color: #fff;
   padding: 20px 0px 10px 0px;
+  border-bottom: 6px solid #0e8fa9;
 }
+
+.bg-navbar {
+  background: rgb(4 20 37 / 99%) !important;
+  color: #fff !important;
+}
+
+.bg-footer {
+  background: rgb(4 20 37 / 99%) !important;
+  color: #fff !important;
+}
+
+.nav-link {
+  color: #fff !important;
+}
+
+.card {
+  border-color: rgb(219 236 255) !important;
+}
+
+.card-body{
+ background: rgb(219 236 255) !important;
+ color: white;
+
+}
+
+.m-img{
+  padding: 0px 100px 0px 100px !important;
+}
+
