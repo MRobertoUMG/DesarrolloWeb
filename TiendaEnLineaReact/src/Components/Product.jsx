@@ -1,7 +1,7 @@
-import laptop from '../assets/products/laptop.jpg';
-import mouse from '../assets/products/mouse.jpg';
-import teclado from '../assets/products/teclado.jpg';
-import audifonos from '../assets/products/audifonos.jpg';
+import laptop from '../assets/product/laptop.jpg';
+import mouse from '../assets/product/mouse.jpg';
+import teclado from '../assets/product/teclado.jpg';
+import audifonos from '../assets/product/audifonos.jpg';
 
 export default function Product({ onSelectProduct }) {
     const products = [

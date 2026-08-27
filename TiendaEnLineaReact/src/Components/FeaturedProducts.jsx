@@ -1,6 +1,6 @@
-import laptop from '../assets/products/laptop.jpg';
-import teclado from '../assets/products/teclado.jpg';
-import mouse from '../assets/products/mouse.jpg';
+import laptop from '../assets/product/laptop.jpg';
+import teclado from '../assets/product/teclado.jpg';
+import mouse from '../assets/product/mouse.jpg';
 
 export default function FeaturedProducts() {
   return (
